@@ -6,11 +6,17 @@ array.unshift("Kiwi") // Nambahin data di awal array
 array.pop() // Remove data yang ada di akhir
 array.shift() // Remove data yang ada di awal
 
-for (let i=0; i<array.length; i++) {
-  console.log(array[i]);
-}
+// for (let i=0; i<array.length; i++) {
+//   console.log(array[i]);
+// }
 
 // array.splice(0, 3) // Remove data dari index yang diinginkan
+
+array[3] = "Kiwi"
+
+const [ buah1, , , buah3 ] = array; // DESTRUCTURING ARRAY
+
+console.log(`Buah pertama adalah: ${buah1}, Buah kedua adalah: ${buah3}`);
 
 // OBJECT
 let people = {
@@ -20,6 +26,9 @@ let people = {
   favfood: ['Mie', 'Pizza', 'Telor ceplok']
 }
 
-people.name = "Firdaus"
+const { name, age } = people // DESTRUCTURING OBJECT
 
-// console.log(array)
+// people.name = "Firdaus" // -->  Assign properties
+people['isFemale'] = true // -->  Assign properties
+
+// console.log(`Hello ${name}, anda berumur ${age}\n`, array)

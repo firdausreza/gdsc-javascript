@@ -3,7 +3,17 @@
 const angka = 100;
 let angka1 = 10;
 let sum = 0;
-const hello = "Hello"
+const hello = "Hello";
+let name = "Reza"; // GLOBAL VARIABLE
+let lastName = "Firdaus"; // GLOBAL VARIABLE
+const age = 21;
+
+// STRINGS
+const greeting = "Hello world, selamat pagi"; // STRING
+const greeting2 = `Hello ${name}, anda berumur ${age}`; // TEMPLATE LITERAL, PAKE BACKTICK (BAWAH ESC)
+const greeting3 = "Hello " + name + ", anda berumur " + age; // CONCATENATION
+
+// console.log(greeting + greeting2)
 
 // ARITHMATIC OPERATORS (+, -, /, *, %, **)
 // sum = sum + angka1; // sum += angka1
@@ -46,3 +56,36 @@ const hello = "Hello"
 //   console.log(sum)
 //   sum++;
 // } while (sum < 5)
+
+if (0 && 1) {
+  console.log(true)
+}
+
+
+// FUNCTION -- PARAMETERS
+function combineFullname() { // --> NON VOID FUNCTION
+  return `Nama lengkap anda adalah: ${name} ${lastName}`;
+  // return name = "Daus"
+}
+
+function combinedFullname(name, lastName) { // --> VOID FUNCTION
+  let umur = 18 // CLOSURE
+
+  function printFullname() {
+    let makanan = "Mie telor" // CLOSURE
+    console.log(`Nama lengkap anda adalah: ${name} ${lastName}`)
+  }
+}
+
+// ARROW FUNCTION -- DIPAKAI UNTUK HANDLING PROMISE / ASYNC FUNCTION
+const getFullname = () => {
+  return `Nama lengkap anda adalah: ${name} ${lastName}\n`
+}
+
+const getLastname = () => `Nama belakang anda adalah: ${lastName}`
+
+
+// console.log(combineFullname())
+combinedFullname("Rafli", "Ihsanuddin")
+console.log(getFullname(), getLastname())
+
